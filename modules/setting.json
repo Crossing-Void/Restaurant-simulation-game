@@ -1,0 +1,10 @@
+{
+    "timeCountdown": [180, 180, 180],
+    "customerPatience": [30, 25, 20],
+    "doneTime": 6,
+    "overTime": 10,
+    "eatTime": [5, 10],
+    "moneyTarget": [3000, 3500, 4000],
+    "cost": 20,
+    "price": 40
+}
