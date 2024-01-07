@@ -159,6 +159,11 @@ class Game:
         self.config_label("target", self.arguments["target"])
         self.real_clock = time.time()
         
+
+        # testing
+        def test(e):
+            print([self.c.gettags(x) for x in self.c.find_overlapping(e.x, e.y, e.x+1, e.y+1)])
+        self.main.root.bind("<Button-1>", test)
         
         
         

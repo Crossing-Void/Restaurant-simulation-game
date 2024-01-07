@@ -5,6 +5,9 @@ class Player:
         self.c = self.main.canvas
         self.cs = self.main.canvas_side
         self.level = 1
+
+        # during the game
+        self.hand = None
     
     def get_arguments_in_level(self):
         s = self.level - 1

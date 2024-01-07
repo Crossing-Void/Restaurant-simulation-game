@@ -29,9 +29,7 @@ class Customer:
    
         
     def check(self, t, unit):
-        print("--------------------")
-        for obj in self.__class__.objects.copy():
-            print(obj.id, obj.exists, obj.count, obj.time)
+       
         for obj in self.__class__.objects.copy():
             if obj.exists:
                 remain = 5 - (t - obj.time) // unit
