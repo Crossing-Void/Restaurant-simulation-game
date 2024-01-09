@@ -9,5 +9,6 @@
     "price": 50,
     "recipeOutframeFrequency": 1.2,
     "customerFrequency": 1.0,
-    "leftMinus": 50
+    "leftMinus": 50, 
+    "hackerOn": true
 }

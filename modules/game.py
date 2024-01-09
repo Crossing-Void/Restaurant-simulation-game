@@ -18,6 +18,21 @@ class Game:
         self.item_dict = {}
         self.timer_for_recipe = time.time()
         self.timer_for_customer = time.time()
+    def __hacker(self):
+        def coin():
+            self.main.Player.money += 200
+        def final():
+            self.main.End.enter()
+            win.destroy()
+        win = new_window("Hacker", "hacker.ico", (200, 200))
+        c = making_widget("Canvas")(win, width=200, height=200, bg="lightblue")
+        
+        c.pack()
+        c.create_image(50, 100, image=tk_image("coin.png", 50, 50, dirpath="images\\items"), tags=("coin"))
+        c.create_image(150, 100, image=tk_image("final.png", 50, 50, dirpath="images\\items"), tags=("final"))
+        c.tag_bind("coin", "<Button-1>", lambda e: coin())
+        c.tag_bind("final", "<Button-1>", lambda e: final())
+        win.grab_set()
 
     def __create_items_image(self):
         img_path = "images\\items"
@@ -56,6 +71,11 @@ class Game:
         self.c.create_image(self.cs[0]-30, self.cs[1]-200-250, anchor="se", image=tk_image(
             "recipe.png", 80, dirpath=img_path), tags=("recipe"))
         self.c.tag_bind("recipe", "<Button-1>", lambda e: self.__open_recipe())
+        # hacker
+        if self.main.hackerOn.get():
+            self.c.create_image(self.cs[0]-80, self.cs[1]-200-400, anchor="se", image=tk_image(
+                "hacker.png", 40, dirpath=img_path), tags=("hacker"))
+            self.c.tag_bind("hacker", "<Button-1>", lambda e: self.__hacker())
         # recipe outframe
         img = tk_image("recipe.png", 80, dirpath=img_path, get_object_only=True)
         width, height = img.width, img.height

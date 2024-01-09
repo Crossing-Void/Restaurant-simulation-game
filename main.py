@@ -44,4 +44,4 @@ if __name__ == "__main__":
             main.Music.judge()
             main.Game.loop()
         except BaseException:
-            pass
+            break
