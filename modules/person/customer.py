@@ -185,6 +185,7 @@ class _customer:
         self.satisfy_time = None
         self.eating_second = None
         self.is_satisfy = False
+        self.__priority = False
 
     def create(self):
         pass
