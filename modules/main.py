@@ -15,6 +15,7 @@ class Effect:
         self.main.Game.start_round(self.main.Player.level)
 
     def __rule(self):
+        play_sound("press")
         pass
 
     def enter(self):

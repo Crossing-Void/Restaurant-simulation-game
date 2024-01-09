@@ -1,12 +1,13 @@
 {
     "timeCountdown": [180, 180, 180],
-    "customerPatience": [30, 25, 20],
-    "moneyTarget": [3000, 3500, 4000],
+    "customerPatience": [60, 55, 50],
+    "moneyTarget": [1500, 2000, 2500],
     "doneTime": 6,
-    "overTime": 10,
-    "eatTime": [5, 10],
+    "overTime": 20,
+    "eatTime": [4, 8],
     "cost": 20,
-    "price": 40,
+    "price": 50,
     "recipeOutframeFrequency": 1.2,
-    "customerFrequency": 1.0
+    "customerFrequency": 1.0,
+    "leftMinus": 50
 }

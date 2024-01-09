@@ -1,9 +1,12 @@
 from Tkinter_template.Assets.universal import parse_json_to_property
 from Tkinter_template.Assets.music import Music
 from Tkinter_template.base import Interface
-from modules.player.player import Player
-from modules.player.customer import Customer
-from modules import *
+from modules.person.customer import Customer
+from modules.person.player import Player
+from modules.initializer import check_font_ready
+from modules.main import Effect
+from modules.game import Game
+from modules.end import EffectEnd
 import time
 import sys
 
@@ -18,15 +21,17 @@ class Main(Interface):
         parse_json_to_property(self, "modules\\setting.json")
         # obejects
         self.Music = Music()
-        self.Start = start.Effect(self)
-        self.Game = game.Game(self)
+        self.Main = Effect(self)
+        self.End = EffectEnd(self)
+        self.Game = Game(self)
         self.Player = Player(self)
         self.Customer = Customer(self)
+      
         # ----- initialize -----
-        if not initializer.check_font_ready():
+        if not check_font_ready():
             sys.exit()
 
-        self.Start.enter()
+        self.Main.enter()
 
 
 if __name__ == "__main__":
