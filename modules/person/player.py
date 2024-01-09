@@ -26,7 +26,7 @@ class Player:
 
     def refresh(self):
         self.hand = None
-        self.__money = 5000
+        self.__money = 0
         self.items_state = {
             "iron-1": None,
             "iron-2": None,
